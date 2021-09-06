@@ -133,8 +133,9 @@ def run(problem, params):
         # Store best cost
         bestcost[i] = bestsol.cost
 
-        # Print out results of iteration
-        print(f"Iteration {i}: Best Cost = {bestcost[i]}")
+        # Print out results of generation
+        if i % 10 == 0:
+            print(f"Generation {i}: Best Cost = {bestcost[i]}")
 
     # Output
     out = namedtuple("out", ["pop", "bestsol", "bestcost"])
